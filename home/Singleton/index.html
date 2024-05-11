@@ -1184,6 +1184,8 @@
       
         
       
+        
+      
     
     
       
@@ -1229,6 +1231,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1332,40 +1355,40 @@
 </li>
 </ol>
 <p>In Apple’s frameworks we have come across below singleton classes:</p>
-<pre><code class="language-swift">// Shared URL Session
-let sharedURLSession = URLSession.shared
-</code></pre>
-<pre><code class="language-swift">// Default File Manager
-let defaultFileManager = FileManager.default
-</code></pre>
-<pre><code class="language-swift">// Standard User Defaults
-let standardUserDefaults = UserDefaults.standard
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Shared URL Session</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">let</span> <span class="nv">sharedURLSession</span> <span class="p">=</span> <span class="n">URLSession</span><span class="p">.</span><span class="n">shared</span>
+</span></code></pre></div>
+<p><div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Default File Manager</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">let</span> <span class="nv">defaultFileManager</span> <span class="p">=</span> <span class="n">FileManager</span><span class="p">.</span><span class="k">default</span>
+</span></code></pre></div>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Standard User Defaults</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">let</span> <span class="nv">standardUserDefaults</span> <span class="p">=</span> <span class="n">UserDefaults</span><span class="p">.</span><span class="n">standard</span>
+</span></code></pre></div></p>
 <h1 id="_1"></h1>
 <p>There are times that you want to make sure only one instance of a class is instantiated and that your application only uses that instance. That’s the primary and only goal of the singleton pattern.</p>
 <h2 id="example">Example:</h2>
-<pre><code class="language-swift">//MARK:- Location Manager
-class LocationManager{
-    static let shared = LocationManager()
-    init(){}
-
-    //MARK:- Location Permission
-    func requestForLocation(){
-        print(&quot;Location Permission granted&quot;)
-    }
-}
-</code></pre>
-<pre><code class="language-swift">//Access the class with Singleton Pattern
-LocationManager.shared.requestForLocation() //&quot;Location Permission granted&quot;
-</code></pre>
-<pre><code class="language-swift">//Still you can access the class by creating instance
-let location = LocationManager() //initialization class
-location.requestForLocation() //Call function here
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">//</span><span class="cs">MARK:</span><span class="c1">- Location Manager</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">class</span> <span class="nc">LocationManager</span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">LocationManager</span><span class="p">()</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="kd">init</span><span class="p">(){}</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="c1">//</span><span class="cs">MARK:</span><span class="c1">- Location Permission</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="kd">func</span> <span class="nf">requestForLocation</span><span class="p">(){</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Location Permission granted&quot;</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">//Access the class with Singleton Pattern</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">LocationManager</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">requestForLocation</span><span class="p">()</span> <span class="c1">//&quot;Location Permission granted&quot;</span>
+</span></code></pre></div>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">//Still you can access the class by creating instance</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">let</span> <span class="nv">location</span> <span class="p">=</span> <span class="n">LocationManager</span><span class="p">()</span> <span class="c1">//initialization class</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">location</span><span class="p">.</span><span class="n">requestForLocation</span><span class="p">()</span> <span class="c1">//Call function here</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <p>So we have to change the access level of initializer</p>
-<pre><code class="language-swift">private init(){}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">private</span> <span class="kd">init</span><span class="p">(){}</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <p>Above class is having by default <code>internal</code> initializer, its change to <code>private</code>. Now you can’t initialize your singleton class again.</p>
 <p><img alt="SingletonExp" src="https://raw.githubusercontent.com/Sivabalaa/images/master/SingletonExp.png" /></p>

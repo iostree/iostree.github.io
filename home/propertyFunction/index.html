@@ -1184,6 +1184,8 @@
       
         
       
+        
+      
     
     
       
@@ -1229,6 +1231,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1321,28 +1344,28 @@
 <a href="http://mit-license.org"><img alt="License" src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <p>You can write a <code>property</code> as <code>func</code> in swift.</p>
 <h2 id="example">Example:</h2>
-<pre><code class="language-swift">class ViewController: UIViewController {
-  //MARK: Declaration
-  var aFunctionProperty: (() -&gt; Void)?
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    //Completion Block
-    aFunctionProperty = { 
-      print(&quot;Success&quot;)
-    }
-  }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> Declaration</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="kd">var</span> <span class="nv">aFunctionProperty</span><span class="p">:</span> <span class="p">(()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)?</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="c1">//Completion Block</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">aFunctionProperty</span> <span class="p">=</span> <span class="p">{</span> 
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>      <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Success&quot;</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <p>To call the property I have written inside button action, you can try inside any API call's or button action or tap-gesture any where you need.</p>
-<pre><code class="language-swift">extension ViewController {
-  @IBAction func buttonAction(_ sender: UIButton) { 
-  //Call the function using optional chaining.
-  //if `aFunctionProperty` is nil or has value, it will work.
-  aFunctionProperty?()
-  } 
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">extension</span> <span class="nc">ViewController</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">buttonAction</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">)</span> <span class="p">{</span> 
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="c1">//Call the function using optional chaining.</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="c1">//if `aFunctionProperty` is nil or has value, it will work.</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="n">aFunctionProperty</span><span class="p">?()</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="p">}</span> 
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <p>"<em>Closures are self-contained blocks of functionality that can be passed around and used in your code.</em>"                <br />
 -<em>Apple</em></p>
@@ -1351,64 +1374,64 @@
 <li>You can add some parameters to pass inside completion block's.</li></li>
 <li>I have tried using <a href="https://developer.apple.com/documentation/swift/result">Result</a> of <code>Swift 5</code>.</li>
 </ol>
-<pre><code class="language-swift">class ViewController: UIViewController {
-  //MARK: Declaration
-  var aFunctionProperty: ((Result) -&gt; Void)? 
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    //Completion Block
-    aFunctionProperty = { (result) in
-      switch result {
-      case .success(true):          
-        print(&quot;Success&quot;)        
-      default:               
-        print(&quot;Fail&quot;)
-      }
-    }
-  }
-}
-</code></pre>
-<pre><code class="language-swift">extension ViewController {
-  @IBAction func buttonAction(_ sender: UIButton) {     
-    //Call the function using optional chaining.
-    //if `aFunctionProperty` is nil or has value, it will work.
-    aFunctionProperty?(.success(true))
-    aFunctionProperty?(.success(false))
-  }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> Declaration</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="kd">var</span> <span class="nv">aFunctionProperty</span><span class="p">:</span> <span class="p">((</span><span class="n">Result</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)?</span> 
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="c1">//Completion Block</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">aFunctionProperty</span> <span class="p">=</span> <span class="p">{</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="k">in</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>      <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>      <span class="k">case</span> <span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="kc">true</span><span class="p">):</span>          
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Success&quot;</span><span class="p">)</span>        
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>      <span class="k">default</span><span class="p">:</span>               
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Fail&quot;</span><span class="p">)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>      <span class="p">}</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="p">}</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>  <span class="p">}</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">extension</span> <span class="nc">ViewController</span> <span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">buttonAction</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">)</span> <span class="p">{</span>     
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="c1">//Call the function using optional chaining.</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="c1">//if `aFunctionProperty` is nil or has value, it will work.</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">aFunctionProperty</span><span class="p">?(.</span><span class="n">success</span><span class="p">(</span><span class="kc">true</span><span class="p">))</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">aFunctionProperty</span><span class="p">?(.</span><span class="n">success</span><span class="p">(</span><span class="kc">false</span><span class="p">))</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  <span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <p>You can also assign a <code>function</code> to a <code>property</code>.</p>
 <h2 id="example_1">Example:</h2>
-<pre><code class="language-swift">class ViewController: UIViewController {
-  //MARK: Declaration
-  var aFunctionProperty: (() -&gt; Void)?
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="c1">//</span><span class="cs">MARK:</span><span class="c1"> Declaration</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="kd">var</span> <span class="nv">aFunctionProperty</span><span class="p">:</span> <span class="p">(()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)?</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_4"></h1>
 <p>In some other class you can do assign &amp; call like:</p>
-<pre><code class="language-swift">class Foo {
-  //Creating Object for Viewcontroller
-  let viewObj = ViewController()
-  //Creating `success` func
-  func success() {
-    print(&quot;Success&quot;)
-  }
-  //Creating `boo` func
-  func boo () {
-    //Assigning a `func` to a `aFunctionProperty`
-    viewObj.aFunctionProperty = success
-   //Call the Property where you need to call.
-   viewObj.aFunctionProperty?()
-  }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="c1">//Creating Object for Viewcontroller</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  <span class="kd">let</span> <span class="nv">viewObj</span> <span class="p">=</span> <span class="n">ViewController</span><span class="p">()</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  <span class="c1">//Creating `success` func</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  <span class="kd">func</span> <span class="nf">success</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Success&quot;</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  <span class="p">}</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  <span class="c1">//Creating `boo` func</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  <span class="kd">func</span> <span class="nf">boo</span> <span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="c1">//Assigning a `func` to a `aFunctionProperty`</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="n">viewObj</span><span class="p">.</span><span class="n">aFunctionProperty</span> <span class="p">=</span> <span class="n">success</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>   <span class="c1">//Call the Property where you need to call.</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>   <span class="n">viewObj</span><span class="p">.</span><span class="n">aFunctionProperty</span><span class="p">?()</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  <span class="p">}</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_5"></h1>
 <p>Now you can call a single function.</p>
-<pre><code class="language-swift">let foo = Foo()
-foo.boo()
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">let</span> <span class="nv">foo</span> <span class="p">=</span> <span class="n">Foo</span><span class="p">()</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">foo</span><span class="p">.</span><span class="n">boo</span><span class="p">()</span>
+</span></code></pre></div>
 <h1 id="_6"></h1>
 <p>Try it in you code, it will work like awesome.</p>
 <p>Let's grow together 🌱</p>

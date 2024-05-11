@@ -1184,6 +1184,8 @@
       
         
       
+        
+      
     
     
       
@@ -1229,6 +1231,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1320,31 +1343,31 @@
 <a href="http://mit-license.org"><img alt="License" src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <p>Get all font names to be used within your app, including the custom fonts.</p>
 <h2 id="objective-c">Objective C:</h2>
-<pre><code class="language-swift">for (NSString *familyName in [UIFont familyNames]){
-    NSLog(@&quot;Family name: %@&quot;, familyName);
-    for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-        NSLog(@&quot;--Font name: %@&quot;, fontName);
-   }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">for</span> <span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="n">familyName</span> <span class="k">in</span> <span class="p">[</span><span class="bp">UIFont</span> <span class="n">familyNames</span><span class="p">]){</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">NSLog</span><span class="p">(@</span><span class="s">&quot;Family name: %@&quot;</span><span class="p">,</span> <span class="n">familyName</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="k">for</span> <span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="n">fontName</span> <span class="k">in</span> <span class="p">[</span><span class="bp">UIFont</span> <span class="n">fontNamesForFamilyName</span><span class="p">:</span><span class="n">familyName</span><span class="p">])</span> <span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="n">NSLog</span><span class="p">(@</span><span class="s">&quot;--Font name: %@&quot;</span><span class="p">,</span> <span class="n">fontName</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   <span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <h2 id="swift-20">Swift 2.0:</h2>
-<pre><code class="language-swift">for familyName:AnyObject in UIFont.familyNames() {
-    print(&quot;Family Name: \(familyName)&quot;)
-    for fontName:AnyObject in UIFont.fontNamesForFamilyName(familyName as! String) {
-      print(&quot;--Font Name: \(fontName)&quot;)
-    }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">for</span> <span class="n">familyName</span><span class="p">:</span><span class="nb">AnyObject</span> <span class="k">in</span> <span class="bp">UIFont</span><span class="p">.</span><span class="n">familyNames</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Family Name: </span><span class="si">\(</span><span class="n">familyName</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">for</span> <span class="n">fontName</span><span class="p">:</span><span class="nb">AnyObject</span> <span class="k">in</span> <span class="bp">UIFont</span><span class="p">.</span><span class="n">fontNamesForFamilyName</span><span class="p">(</span><span class="n">familyName</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      <span class="bp">print</span><span class="p">(</span><span class="s">&quot;--Font Name: </span><span class="si">\(</span><span class="n">fontName</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <h2 id="above-swift-30">Above Swift 3.0:</h2>
-<pre><code class="language-swift">for familyName:String in UIFont.familyNames {
-    print(&quot;Family Name: \(familyName)&quot;)
-    for fontName:String in UIFont.fontNames(forFamilyName: familyName) {
-      print(&quot;--Font Name: \(fontName)&quot;)
-    }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">for</span> <span class="n">familyName</span><span class="p">:</span><span class="nb">String</span> <span class="k">in</span> <span class="bp">UIFont</span><span class="p">.</span><span class="n">familyNames</span> <span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Family Name: </span><span class="si">\(</span><span class="n">familyName</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">for</span> <span class="n">fontName</span><span class="p">:</span><span class="nb">String</span> <span class="k">in</span> <span class="bp">UIFont</span><span class="p">.</span><span class="n">fontNames</span><span class="p">(</span><span class="n">forFamilyName</span><span class="p">:</span> <span class="n">familyName</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>      <span class="bp">print</span><span class="p">(</span><span class="s">&quot;--Font Name: </span><span class="si">\(</span><span class="n">fontName</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="p">}</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <p>Let's grow together 🌱</p>
 <p>Cheers 🍻</p>

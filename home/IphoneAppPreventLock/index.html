@@ -1184,6 +1184,8 @@
       
         
       
+        
+      
     
     
       
@@ -1229,6 +1231,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1319,25 +1342,25 @@
 <p><a href="https://developer.apple.com/iphone/index.action"><img alt="Platform" src="http://img.shields.io/badge/platform-iOS-blue.svg?style=flat" /></a>
 <a href="http://mit-license.org"><img alt="License" src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <h2 id="objective-c">Objective-C:</h2>
-<pre><code class="language-swift">[[UIApplication sharedApplication] setIdleTimerDisabled: YES];
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">[[</span><span class="bp">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="n">setIdleTimerDisabled</span><span class="p">:</span> <span class="n">YES</span><span class="p">];</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <h2 id="swift-20">Swift 2.0:</h2>
-<pre><code class="language-swift">UIApplication.sharedApplication().idleTimerDisabled = true
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="bp">UIApplication</span><span class="p">.</span><span class="n">sharedApplication</span><span class="p">().</span><span class="n">idleTimerDisabled</span> <span class="p">=</span> <span class="kc">true</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <h2 id="swift-3">Swift 3:</h2>
-<pre><code class="language-swift">UIApplication.shared.isIdleTimerDisabled = true
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="bp">UIApplication</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">isIdleTimerDisabled</span> <span class="p">=</span> <span class="kc">true</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <p>Here you have two options depending on where you want to invoke the code:</p>
-<p>Inside <code>AppDelegate.swift</code>:</p>
-<pre><code class="language-swift">application.isIdleTimerDisabled = true
-</code></pre>
+<p>Inside <code>AppDelegate.swift</code>:
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">application</span><span class="p">.</span><span class="n">isIdleTimerDisabled</span> <span class="p">=</span> <span class="kc">true</span>
+</span></code></pre></div></p>
 <h1 id="_4"></h1>
-<p>Outside <code>AppDelegate.swift</code>:</p>
-<pre><code class="language-swift">UIApplication.shared.isIdleTimerDisabled = true
-</code></pre>
+<p>Outside <code>AppDelegate.swift</code>:
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="bp">UIApplication</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">isIdleTimerDisabled</span> <span class="p">=</span> <span class="kc">true</span>
+</span></code></pre></div></p>
 <h1 id="_5"></h1>
 <p>Let's grow together 🌱</p>
 <p>Cheers 🍻</p>

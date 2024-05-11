@@ -1145,6 +1145,8 @@
       
         
       
+        
+      
     
     
       
@@ -1190,6 +1192,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1281,31 +1304,31 @@
 <li>Import <code>UIScreen+ScreenSize.swift</code> into you project</li>
 <li>If you need to design specifically for iPhoneX series use the below code.</li>
 </ul>
-<pre><code class="language-swift">if UIScreen.screenSizeType().isIPhoneX {
-    print(&quot;iPhoneX models...&quot;)
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">if</span> <span class="bp">UIScreen</span><span class="p">.</span><span class="n">screenSizeType</span><span class="p">().</span><span class="n">isIPhoneX</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;iPhoneX models...&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <ul>
 <li>For other uses like if you need to redesign for iPhoneSE &amp; similar smaller devices, you can go with <code>switch</code> cases.</li>
 </ul>
-<pre><code class="language-swift">switch UIScreen.screenSizeType() {
-    case .inch4(.portrait),.inch4(.landscape):
-        print(&quot;iPhoneSE&quot;)
-    case .inch4_7:
-        print(&quot;iPhone8&quot;)
-    default:
-        break
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">switch</span> <span class="bp">UIScreen</span><span class="p">.</span><span class="n">screenSizeType</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">case</span> <span class="p">.</span><span class="n">inch4</span><span class="p">(.</span><span class="n">portrait</span><span class="p">),.</span><span class="n">inch4</span><span class="p">(.</span><span class="n">landscape</span><span class="p">):</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;iPhoneSE&quot;</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">case</span> <span class="p">.</span><span class="n">inch4_7</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;iPhone8&quot;</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">default</span><span class="p">:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="k">break</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
-<pre><code class="language-swift">print(UIScreen.screenSizeType())
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="bp">print</span><span class="p">(</span><span class="bp">UIScreen</span><span class="p">.</span><span class="n">screenSizeType</span><span class="p">())</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <h2 id="output">Output</h2>
-<pre><code class="language-swift">iPhoneX models...
-inch6_1(Macros.ScreenOrientation.portrait)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">iPhoneX</span> <span class="n">models</span><span class="p">...</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">inch6_1</span><span class="p">(</span><span class="n">Macros</span><span class="p">.</span><span class="n">ScreenOrientation</span><span class="p">.</span><span class="n">portrait</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_4"></h1>
 <h2 id="reference-iphoneresolutions">Reference: <a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions">iPhoneResolutions</a></h2>
 <h1 id="_5"></h1>

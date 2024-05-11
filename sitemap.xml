@@ -171,6 +171,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://iostree.github.io/interview/appthinning/</loc>
+         <lastmod>2024-05-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://iostree.github.io/interview/initializer/</loc>
          <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>

@@ -1184,6 +1184,8 @@
       
         
       
+        
+      
     
     
       
@@ -1229,6 +1231,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1328,25 +1351,25 @@
 <li>Download image from URL &amp; added to cache</li>
 <li>Default image option</li>
 </ul>
-<pre><code class="language-swift">let url:URL? = URL(string: &quot;https://raw.githubusercontent.com/Sivabalaa/images/master/iOSTreeLogo.png&quot;)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">let</span> <span class="nv">url</span><span class="p">:</span><span class="n">URL</span><span class="p">?</span> <span class="p">=</span> <span class="n">URL</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">&quot;https://raw.githubusercontent.com/Sivabalaa/images/master/iOSTreeLogo.png&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <p>Use the below code to get image from URL</p>
-<pre><code class="language-swift">imageView.setImage(from: url, placeholder: UIImage(named: &quot;sample&quot;))
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">imageView</span><span class="p">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">placeholder</span><span class="p">:</span> <span class="bp">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;sample&quot;</span><span class="p">))</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <p>or </p>
-<pre><code class="language-swift">imageView.setImage(from: url)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">imageView</span><span class="p">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <p>If you are loading multiple image in <a href="https://developer.apple.com/documentation/uikit/uitableview"><code>UITableview</code></a> or in <a href="https://developer.apple.com/documentation/uikit/uicollectionview"><code>UICollectionView</code></a></p>
-<p>Use the below code to get image from URL &amp; added to cache</p>
-<pre><code class="language-swift">imageView.setImage(from: url, isCache: true)
-</code></pre>
+<p>Use the below code to get image from URL &amp; added to cache
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">imageView</span><span class="p">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">isCache</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</span></code></pre></div></p>
 <h1 id="_4"></h1>
-<p>or </p>
-<pre><code class="language-swift">imageView.setImage(from: url, placeholder: UIImage(named: &quot;sample&quot;), isCache: true)
-</code></pre>
+<p>or 
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">imageView</span><span class="p">.</span><span class="n">setImage</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">placeholder</span><span class="p">:</span> <span class="bp">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;sample&quot;</span><span class="p">),</span> <span class="n">isCache</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</span></code></pre></div></p>
 <h1 id="_5"></h1>
 <h3 id="download-the-file-here">Download the file here</h3>
 <p><a href="https://github.com/Sivabalaa/UIImageView-loadFromUrl/blob/master/UIImageView%2BloadFromUrl.swift">UIImageView+loadFromUrl.swift</a></p>

@@ -1184,6 +1184,8 @@
       
         
       
+        
+      
     
     
       
@@ -1229,6 +1231,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1321,22 +1344,22 @@
 <a href="http://mit-license.org"><img alt="License" src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <p>You can declare globally to get appVersion any where.</p>
 <h2 id="swift">Swift:</h2>
-<pre><code class="language-swift">//MARK:- appVersion
-public var appVersion: String {
-    //versionNumber
-    let versionNumber = Bundle.main.object(forInfoDictionaryKey: &quot;CFBundleShortVersionString&quot;) ?? &quot;1.0&quot;
-    //buildNumber
-    let buildNumber = Bundle.main.object(forInfoDictionaryKey: &quot;CFBundleVersion&quot;) ?? &quot;1.0&quot;
-    return &quot;Version: #\(versionNumber) (#\(buildNumber))&quot;
-}
-</code></pre>
-<pre><code class="language-swift">print(appVersion)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">//</span><span class="cs">MARK:</span><span class="c1">- appVersion</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">public</span> <span class="kd">var</span> <span class="nv">appVersion</span><span class="p">:</span> <span class="nb">String</span> <span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="c1">//versionNumber</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="kd">let</span> <span class="nv">versionNumber</span> <span class="p">=</span> <span class="n">Bundle</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">object</span><span class="p">(</span><span class="n">forInfoDictionaryKey</span><span class="p">:</span> <span class="s">&quot;CFBundleShortVersionString&quot;</span><span class="p">)</span> <span class="p">??</span> <span class="s">&quot;1.0&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="c1">//buildNumber</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="kd">let</span> <span class="nv">buildNumber</span> <span class="p">=</span> <span class="n">Bundle</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">object</span><span class="p">(</span><span class="n">forInfoDictionaryKey</span><span class="p">:</span> <span class="s">&quot;CFBundleVersion&quot;</span><span class="p">)</span> <span class="p">??</span> <span class="s">&quot;1.0&quot;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">return</span> <span class="s">&quot;Version: #</span><span class="si">\(</span><span class="n">versionNumber</span><span class="si">)</span><span class="s"> (#</span><span class="si">\(</span><span class="n">buildNumber</span><span class="si">)</span><span class="s">)&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="bp">print</span><span class="p">(</span><span class="n">appVersion</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <h2 id="output">Output:</h2>
-<pre><code class="language-swift">Version: #1.0 (#1.0.3)
-</code></pre>
-<p>Let's grow together 🌱</p>
+<p><div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Version</span><span class="p">:</span> <span class="p">#</span><span class="mf">1.0</span> <span class="p">(#</span><span class="mf">1.0</span><span class="p">.</span><span class="mi">3</span><span class="p">)</span>
+</span></code></pre></div>
+Let's grow together 🌱</p>
 <p>Cheers 🍻</p>
 
 

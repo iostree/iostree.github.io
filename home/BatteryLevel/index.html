@@ -1145,6 +1145,8 @@
       
         
       
+        
+      
     
     
       
@@ -1190,6 +1192,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1264,27 +1287,27 @@
 <a href="https://developer.apple.com/swift"><img alt="Language" src="http://img.shields.io/badge/language-Swift-brightgreen.svg?style=flat" /></a>
 <a href="http://mit-license.org"><img alt="License" src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <p>First we need enable battery monitoring to get Battery Level &amp; Battery Status</p>
-<pre><code class="language-swift">UIDevice.current.isBatteryMonitoringEnabled = true
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="bp">UIDevice</span><span class="p">.</span><span class="n">current</span><span class="p">.</span><span class="n">isBatteryMonitoringEnabled</span> <span class="p">=</span> <span class="kc">true</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <p>Battery level ranges from 0.0 (fully discharged) to 1.0 (100% charged)</p>
 <p>To get the Battery Level</p>
-<pre><code class="language-swift">var batteryLevel: Float { UIDevice.current.batteryLevel }
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span> <span class="nv">batteryLevel</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">{</span> <span class="bp">UIDevice</span><span class="p">.</span><span class="n">current</span><span class="p">.</span><span class="n">batteryLevel</span> <span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <p>You can add observer to monitor Battery Level continuously.</p>
-<pre><code class="language-swift">NotificationCenter.default.addObserver(self, selector: #selector(batteryLevelDidChange), name: UIDevice.batteryLevelDidChangeNotification, object: nil)
-</code></pre>
-<pre><code class="language-swift">//MARK:- Get Battery Level
-@objc func batteryLevelDidChange(_ notification: Notification) {
-    print(&quot;\(Int(batteryLevel * 100))%&quot;)
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">NotificationCenter</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">addObserver</span><span class="p">(</span><span class="kc">self</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">batteryLevelDidChange</span><span class="p">),</span> <span class="n">name</span><span class="p">:</span> <span class="bp">UIDevice</span><span class="p">.</span><span class="n">batteryLevelDidChangeNotification</span><span class="p">,</span> <span class="n">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">//</span><span class="cs">MARK:</span><span class="c1">- Get Battery Level</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kr">@objc</span> <span class="kd">func</span> <span class="nf">batteryLevelDidChange</span><span class="p">(</span><span class="kc">_</span> <span class="n">notification</span><span class="p">:</span> <span class="n">Notification</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">\(</span><span class="nb">Int</span><span class="si">(</span><span class="n">batteryLevel</span> <span class="o">*</span> <span class="mi">100</span><span class="si">))</span><span class="s">%&quot;</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <p><a href="https://developer.apple.com/documentation/uikit/uidevice/1620042-batterylevel">Ref: Apple Document - Battery Level</a></p>
 <p>You can also verify the battery power state of the device</p>
-<pre><code class="language-swift">var batteryState: UIDevice.BatteryState { UIDevice.current.batteryState }
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">var</span> <span class="nv">batteryState</span><span class="p">:</span> <span class="bp">UIDevice</span><span class="p">.</span><span class="n">BatteryState</span> <span class="p">{</span> <span class="bp">UIDevice</span><span class="p">.</span><span class="n">current</span><span class="p">.</span><span class="n">batteryState</span> <span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_4"></h1>
 <h2 id="overview">Overview:</h2>
 <p><code>Enumeration</code> constants are used by the batteryState property</p>
@@ -1311,22 +1334,22 @@
 </li>
 </ul>
 <p>You can add observer to monitor Battery State continuously.</p>
-<pre><code class="language-swift">NotificationCenter.default.addObserver(self, selector: #selector(batteryStateDidChange), name: UIDevice.batteryStateDidChangeNotification, object: nil)
-</code></pre>
-<pre><code class="language-swift">//MARK:- Get Battery State
-@objc func batteryStateDidChange(_ notification: Notification) {
-    switch batteryState {
-        case .unplugged, .unknown:
-            print(&quot;Not charging&quot;)
-        case .charging:
-            print(&quot;Charging&quot;)
-        case .full:
-            print(&quot;Full&quot;)
-        @unknown default:
-            print(&quot;Nothing&quot;)
-    }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">NotificationCenter</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">addObserver</span><span class="p">(</span><span class="kc">self</span><span class="p">,</span> <span class="n">selector</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">batteryStateDidChange</span><span class="p">),</span> <span class="n">name</span><span class="p">:</span> <span class="bp">UIDevice</span><span class="p">.</span><span class="n">batteryStateDidChangeNotification</span><span class="p">,</span> <span class="n">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">//</span><span class="cs">MARK:</span><span class="c1">- Get Battery State</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kr">@objc</span> <span class="kd">func</span> <span class="nf">batteryStateDidChange</span><span class="p">(</span><span class="kc">_</span> <span class="n">notification</span><span class="p">:</span> <span class="n">Notification</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">switch</span> <span class="n">batteryState</span> <span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="k">case</span> <span class="p">.</span><span class="n">unplugged</span><span class="p">,</span> <span class="p">.</span><span class="n">unknown</span><span class="p">:</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Not charging&quot;</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="k">case</span> <span class="p">.</span><span class="n">charging</span><span class="p">:</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Charging&quot;</span><span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="k">case</span> <span class="p">.</span><span class="n">full</span><span class="p">:</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Full&quot;</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="p">@</span><span class="n">unknown</span> <span class="k">default</span><span class="p">:</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Nothing&quot;</span><span class="p">)</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="p">}</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_9"></h1>
 <p><a href="https://developer.apple.com/documentation/uikit/uidevice/batterystate">Ref: Apple Document - Battery State</a></p>
 <h2 id="sample">Sample:</h2>

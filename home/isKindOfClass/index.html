@@ -1145,6 +1145,8 @@
       
         
       
+        
+      
     
     
       
@@ -1190,6 +1192,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1269,36 +1292,36 @@
 <h2 id="iskindofclass">isKindOfClass:</h2>
 <p>Returns a Boolean value that indicates whether the receiver is an instance of given class or an instance of any class that inherits from that class.</p>
 <h2 id="objective-c">Objective C:</h2>
-<pre><code class="language-swift">if ([element isKindOfClass: [UIImageView class]]) {
-
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">if</span> <span class="p">([</span><span class="n">element</span> <span class="n">isKindOfClass</span><span class="p">:</span> <span class="p">[</span><span class="bp">UIImageView</span> <span class="kd">class</span><span class="p">]])</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <p>or</p>
-<pre><code class="language-swift">NSArray *viewControllers = [self.navigationController viewControllers];
-    for (id aViewController in viewControllers) {
-        if([aViewController isKindOfClass:[TestViewController class]]){
-            print(aViewController)
-            return;//return for stop the loop
-        }
-    }
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="bp">NSArray</span> <span class="o">*</span><span class="n">viewControllers</span> <span class="p">=</span> <span class="p">[</span><span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="n">viewControllers</span><span class="p">];</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="k">for</span> <span class="p">(</span><span class="n">id</span> <span class="n">aViewController</span> <span class="k">in</span> <span class="n">viewControllers</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="k">if</span><span class="p">([</span><span class="n">aViewController</span> <span class="n">isKindOfClass</span><span class="p">:[</span><span class="n">TestViewController</span> <span class="kd">class</span><span class="p">]]){</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>            <span class="bp">print</span><span class="p">(</span><span class="n">aViewController</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            <span class="k">return</span><span class="p">;</span><span class="c1">//return for stop the loop</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="p">}</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <h2 id="swift">Swift:</h2>
-<pre><code class="language-swift">if (element is UIImageView) {
-
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span> <span class="p">(</span><span class="n">element</span> <span class="k">is</span> <span class="bp">UIImageView</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_4"></h1>
 <p>or</p>
-<pre><code class="language-swift">let viewControllers: [UIViewController] = (self.navigationController?.viewControllers)! as [UIViewController];
-    for aViewController:UIViewController in viewControllers {
-        if aViewController.isKind(of: TestViewController.self) {
-            print(aViewController)
-            return //return for stop the loop
-        }
-    }
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">let</span> <span class="nv">viewControllers</span><span class="p">:</span> <span class="p">[</span><span class="bp">UIViewController</span><span class="p">]</span> <span class="p">=</span> <span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">navigationController</span><span class="p">?.</span><span class="n">viewControllers</span><span class="p">)</span><span class="o">!</span> <span class="k">as</span> <span class="p">[</span><span class="bp">UIViewController</span><span class="p">];</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">for</span> <span class="n">aViewController</span><span class="p">:</span><span class="bp">UIViewController</span> <span class="k">in</span> <span class="n">viewControllers</span> <span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        <span class="k">if</span> <span class="n">aViewController</span><span class="p">.</span><span class="n">isKind</span><span class="p">(</span><span class="n">of</span><span class="p">:</span> <span class="n">TestViewController</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>            <span class="bp">print</span><span class="p">(</span><span class="n">aViewController</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>            <span class="k">return</span> <span class="c1">//return for stop the loop</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="p">}</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_5"></h1>
 <p>Let's grow together 🌱</p>
 <p>Cheers 🍻</p>

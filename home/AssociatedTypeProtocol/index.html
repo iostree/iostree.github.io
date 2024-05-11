@@ -1145,6 +1145,8 @@
       
         
       
+        
+      
     
     
       
@@ -1190,6 +1192,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1265,79 +1288,79 @@
 <a href="https://mit-license.org"><img alt="License" src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <p>You have come accross <a href="https://iostree.ml/Protocol">protocol</a> &amp; it's functionalities, you will be addicted to it.</p>
 <p>Now we will learn about <code>associatedtype</code> in protocol.</p>
-<pre><code class="language-swift">protocol Details {
- var property: String { get set }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">protocol</span> <span class="nc">Details</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> <span class="kd">var</span> <span class="nv">property</span><span class="p">:</span> <span class="nb">String</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">set</span> <span class="p">}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <p>We can create <code>class</code> as Person</p>
-<pre><code class="language-swift">class Person: Details {
-    var property = &quot;iOS Developer&quot;
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span> <span class="nc">Person</span><span class="p">:</span> <span class="n">Details</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="kd">var</span> <span class="nv">property</span> <span class="p">=</span> <span class="s">&quot;iOS Developer&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <p>You can just call like </p>
-<pre><code class="language-swift">let person = Person()
-print(person.property)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">let</span> <span class="nv">person</span> <span class="p">=</span> <span class="n">Person</span><span class="p">()</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="bp">print</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">property</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <h3 id="output">Output:</h3>
-<pre><code class="language-swift">iOS Developer
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">iOS</span> <span class="n">Developer</span>
+</span></code></pre></div>
 <h1 id="_4"></h1>
 <p><code>protocol</code> forces <code>class</code>/<code>struct</code> to work with <code>String</code>. But, what if you want property to be <code>Int</code> or <code>Bool</code>.</p>
 <p>For this swift has introduced <strong>Protocol Associated Types</strong>.</p>
 <p>In General we can create <code>struct</code> as generic type <T>,</p>
-<pre><code class="language-swift">struct GenericStruct&lt;T&gt; {
- var property: T?
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">struct</span> <span class="nc">GenericStruct</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a> <span class="kd">var</span> <span class="nv">property</span><span class="p">:</span> <span class="n">T</span><span class="p">?</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_5"></h1>
-<pre><code class="language-swift">let explictStruct = GenericStruct&lt;Bool&gt;()
-// T is Bool
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">let</span> <span class="nv">explictStruct</span> <span class="p">=</span> <span class="n">GenericStruct</span><span class="p">&lt;</span><span class="nb">Bool</span><span class="p">&gt;()</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">// T is Bool</span>
+</span></code></pre></div>
 <h1 id="_6"></h1>
-<pre><code class="language-swift">let implicitStruct = GenericStruct(property: &quot;iOS Developer&quot;)
-// T is String
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">let</span> <span class="nv">implicitStruct</span> <span class="p">=</span> <span class="n">GenericStruct</span><span class="p">(</span><span class="n">property</span><span class="p">:</span> <span class="s">&quot;iOS Developer&quot;</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">// T is String</span>
+</span></code></pre></div>
 <h1 id="_7"></h1>
 <p>But when you come to <code>protocol</code> we have to use <code>associatedtype</code>.</p>
 <p>Let try with above <code>Details</code> example:</p>
-<pre><code class="language-swift">protocol Details {
- associatedtype anyType
- var property: anyType { get set }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">protocol</span> <span class="nc">Details</span> <span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a> <span class="kd">associatedtype</span> <span class="n">anyType</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> <span class="kd">var</span> <span class="nv">property</span><span class="p">:</span> <span class="n">anyType</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">set</span> <span class="p">}</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_8"></h1>
 <p>"<em>Associated type = type alias + generics</em>"</p>
-<pre><code class="language-swift">class Person: Details {
-    var property = &quot;iOS Developer&quot;
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">class</span> <span class="nc">Person</span><span class="p">:</span> <span class="n">Details</span> <span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="kd">var</span> <span class="nv">property</span> <span class="p">=</span> <span class="s">&quot;iOS Developer&quot;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_9"></h1>
 <p>also you can create a <code>class</code>/<code>struct</code> with some other datatype.</p>
-<pre><code class="language-swift">struct Person1: Details {
-    var property = 2020
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">struct</span> <span class="nc">Person1</span><span class="p">:</span> <span class="n">Details</span> <span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="kd">var</span> <span class="nv">property</span> <span class="p">=</span> <span class="mi">2020</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_10"></h1>
 <p>Now you can just call</p>
-<pre><code class="language-swift">let person = Person()
-print(person.property)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">let</span> <span class="nv">person</span> <span class="p">=</span> <span class="n">Person</span><span class="p">()</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="bp">print</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="n">property</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_11"></h1>
 <h3 id="output_1">Output:</h3>
-<pre><code class="language-swift">iOS Developer
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">iOS</span> <span class="n">Developer</span>
+</span></code></pre></div>
 <h1 id="_12"></h1>
 <p>For <code>Person1</code></p>
-<pre><code class="language-swift">let person1 = Person1()
-print(person1.property)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">let</span> <span class="nv">person1</span> <span class="p">=</span> <span class="n">Person1</span><span class="p">()</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="bp">print</span><span class="p">(</span><span class="n">person1</span><span class="p">.</span><span class="n">property</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_13"></h1>
 <h3 id="output_2">Output:</h3>
-<pre><code class="language-swift">2020
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="mi">2020</span>
+</span></code></pre></div>
 <h1 id="_14"></h1>
 <h2 id="download-the-sample-here">Download the sample here</h2>
 <p><a href="https://github.com/Sivabalaa/AssociatedTypeProtocol">AssociatedType.playground</a></p>

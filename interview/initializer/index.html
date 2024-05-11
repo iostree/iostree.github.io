@@ -16,7 +16,7 @@
         <link rel="prev" href="../../about/">
       
       
-        <link rel="next" href="../../logics/">
+        <link rel="next" href="../appthinning/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1132,6 +1132,8 @@
       
         
       
+        
+      
     
     
       
@@ -1227,39 +1229,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Designated Initializers:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#struct" class="md-nav__link">
-    <span class="md-ellipsis">
-      Struct
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enum
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1325,6 +1294,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1384,39 +1374,6 @@
       1. Designated Initializers:
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="1. Designated Initializers:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#struct" class="md-nav__link">
-    <span class="md-ellipsis">
-      Struct
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enum
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1495,182 +1452,190 @@
 <li>Designated initializers are the primary initializers for a class, structure, or enumeration.</li>
 <li>A class, structure, or enumeration must have at least one designated initializer.</li>
 </ul>
-<h3 id="struct">Struct</h3>
-<pre><code class="language-swift">struct Point {
-    var x: Double
-    var y: Double
-
-    // Designated initializer
-    init(x: Double, y: Double) {
-        self.x = x
-        self.y = y
-    }
-
-    // Method to display information
-    func displayInfo() {
-        print(&quot;Point coordinates: (\(x), \(y))&quot;)
-    }
-}
-
-// Creating an instance using the designated initializer
-let point1 = Point(x: 3.0, y: 5.0)
-
-// Accessing properties and methods of the instance
-point1.displayInfo() // Output: Point coordinates: (3.0, 5.0)
-
-</code></pre>
-<h3 id="class">Class</h3>
-<pre><code class="language-swift">class Point {
-    var x: Double
-    var y: Double
-
-    // Designated initializer
-    init(x: Double, y: Double) {
-        self.x = x
-        self.y = y
-    }
-
-    // Method to display information
-    func displayInfo() {
-        print(&quot;Point coordinates: (\(x), \(y))&quot;)
-    }
-}
-
-// Creating an instance using the designated initializer
-let point1 = Point(x: 3.0, y: 5.0)
-
-// Accessing properties and methods of the instance
-point1.displayInfo() // Output: Point coordinates: (3.0, 5.0)
-
-</code></pre>
-<h3 id="enum">Enum</h3>
+<div class="admonition tip">
+<p class="admonition-title">Enum:</p>
 <ol>
-<li>Enums in Swift don't support stored properties like classes and structs, so they don't require initializers in the same way. </li>
+<li>Enums in Swift don't support stored properties like classes and structs, so they don't require initializers in the same way.</li>
 <li>However, you can define associated values for enum cases, and those associated values can be initialized.</li>
 </ol>
-<pre><code class="language-swift">enum DayOfWeek: String {
-    case monday, tuesday, wednesday, thursday, friday, saturday, sunday
-
-    // Designated initializer
-    init?(dayString: String) {
-        switch dayString.lowercased() {
-        case &quot;monday&quot;:
-            self = .monday
-        case &quot;tuesday&quot;:
-            self = .tuesday
-        case &quot;wednesday&quot;:
-            self = .wednesday
-        case &quot;thursday&quot;:
-            self = .thursday
-        case &quot;friday&quot;:
-            self = .friday
-        case &quot;saturday&quot;:
-            self = .saturday
-        case &quot;sunday&quot;:
-            self = .sunday
-        default:
-            return nil
-        }
-    }
-}
-
-// Creating instances using the designated initializer
-if let monday = DayOfWeek(dayString: &quot;Monday&quot;),
-   let saturday = DayOfWeek(dayString: &quot;saturday&quot;),
-   let invalidDay = DayOfWeek(dayString: &quot;invalid&quot;) {
-    print(monday.rawValue)    // Output: monday
-    print(saturday.rawValue)  // Output: saturday
-    print(invalidDay)         // Output: nil
-}
-</code></pre>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Struct</label><label for="__tabbed_1_2">Class</label><label for="__tabbed_1_3">Enum</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">struct</span> <span class="nc">Point</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="kd">var</span> <span class="nv">x</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="kd">var</span> <span class="nv">y</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll">    <span class="c1">// Designated initializer</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="hll">    <span class="kd">init</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">Double</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">Double</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span>
+</span></span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span>
+</span></span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="hll">    <span class="p">}</span>
+</span></span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="c1">// Method to display information</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="kd">func</span> <span class="nf">displayInfo</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Point coordinates: (</span><span class="si">\(</span><span class="n">x</span><span class="si">)</span><span class="s">, </span><span class="si">\(</span><span class="n">y</span><span class="si">)</span><span class="s">)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1">// Creating an instance using the designated initializer</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="kd">let</span> <span class="nv">point1</span> <span class="p">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1">// Accessing properties and methods of the instance</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">point1</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span> <span class="c1">// Output: Point coordinates: (3.0, 5.0)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span> <span class="nc">Point</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="kd">var</span> <span class="nv">x</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="kd">var</span> <span class="nv">y</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll">    <span class="c1">// Designated initializer</span>
+</span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="hll">    <span class="kd">init</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">Double</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">Double</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span>
+</span></span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span>
+</span></span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="hll">    <span class="p">}</span>
+</span></span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="c1">// Method to display information</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="kd">func</span> <span class="nf">displayInfo</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Point coordinates: (</span><span class="si">\(</span><span class="n">x</span><span class="si">)</span><span class="s">, </span><span class="si">\(</span><span class="n">y</span><span class="si">)</span><span class="s">)&quot;</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="p">}</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1">// Creating an instance using the designated initializer</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="kd">let</span> <span class="nv">point1</span> <span class="p">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">)</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1">// Accessing properties and methods of the instance</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">point1</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span> <span class="c1">// Output: Point coordinates: (3.0, 5.0)     </span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">enum</span> <span class="nc">DayOfWeek</span><span class="p">:</span> <span class="nb">String</span> <span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">case</span> <span class="n">monday</span><span class="p">,</span> <span class="n">tuesday</span><span class="p">,</span> <span class="n">wednesday</span><span class="p">,</span> <span class="n">thursday</span><span class="p">,</span> <span class="n">friday</span><span class="p">,</span> <span class="n">saturday</span><span class="p">,</span> <span class="n">sunday</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="c1">// Designated initializer</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="kd">init</span><span class="p">?(</span><span class="n">dayString</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="k">switch</span> <span class="n">dayString</span><span class="p">.</span><span class="n">lowercased</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="k">case</span> <span class="s">&quot;monday&quot;</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>            <span class="kc">self</span> <span class="p">=</span> <span class="p">.</span><span class="n">monday</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="k">case</span> <span class="s">&quot;tuesday&quot;</span><span class="p">:</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            <span class="kc">self</span> <span class="p">=</span> <span class="p">.</span><span class="n">tuesday</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="k">case</span> <span class="s">&quot;wednesday&quot;</span><span class="p">:</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>            <span class="kc">self</span> <span class="p">=</span> <span class="p">.</span><span class="n">wednesday</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="k">case</span> <span class="s">&quot;thursday&quot;</span><span class="p">:</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            <span class="kc">self</span> <span class="p">=</span> <span class="p">.</span><span class="n">thursday</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="k">case</span> <span class="s">&quot;friday&quot;</span><span class="p">:</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>            <span class="kc">self</span> <span class="p">=</span> <span class="p">.</span><span class="n">friday</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        <span class="k">case</span> <span class="s">&quot;saturday&quot;</span><span class="p">:</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>            <span class="kc">self</span> <span class="p">=</span> <span class="p">.</span><span class="n">saturday</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        <span class="k">case</span> <span class="s">&quot;sunday&quot;</span><span class="p">:</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>            <span class="kc">self</span> <span class="p">=</span> <span class="p">.</span><span class="n">sunday</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>        <span class="k">default</span><span class="p">:</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            <span class="k">return</span> <span class="kc">nil</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        <span class="p">}</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    <span class="p">}</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="p">}</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="c1">// Creating instances using the designated initializer</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="k">if</span> <span class="kd">let</span> <span class="nv">monday</span> <span class="p">=</span> <span class="n">DayOfWeek</span><span class="p">(</span><span class="n">dayString</span><span class="p">:</span> <span class="s">&quot;Monday&quot;</span><span class="p">),</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="kd">let</span> <span class="nv">saturday</span> <span class="p">=</span> <span class="n">DayOfWeek</span><span class="p">(</span><span class="n">dayString</span><span class="p">:</span> <span class="s">&quot;saturday&quot;</span><span class="p">),</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="kd">let</span> <span class="nv">invalidDay</span> <span class="p">=</span> <span class="n">DayOfWeek</span><span class="p">(</span><span class="n">dayString</span><span class="p">:</span> <span class="s">&quot;invalid&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    <span class="bp">print</span><span class="p">(</span><span class="n">monday</span><span class="p">.</span><span class="n">rawValue</span><span class="p">)</span>    <span class="c1">// Output: monday</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    <span class="bp">print</span><span class="p">(</span><span class="n">saturday</span><span class="p">.</span><span class="n">rawValue</span><span class="p">)</span>  <span class="c1">// Output: saturday</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    <span class="bp">print</span><span class="p">(</span><span class="n">invalidDay</span><span class="p">)</span>         <span class="c1">// Output: nil</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="2-convenience-initializers"><strong>2. Convenience Initializers:</strong></h2>
 <ul>
 <li>Convenience initializers are secondary initializers provided by a class, structure, or enumeration.</li>
 <li>They are defined with the convenience modifier and are used to create an instance of the type in a simpler or more convenient way.</li>
 <li>Convenience initializers must call another initializer of the same type using self.init.</li>
 </ul>
-<pre><code class="language-swift">struct Point {
-    var x: Double
-    var y: Double
-
-    // Designated initializer
-    init(x: Double, y: Double) {
-        self.x = x
-        self.y = y
-    }
-
-    // Convenience initializer
-    init() {
-        self.init(x: 0.0, y: 0.0)
-    }
-
-    // Method to display information
-    func displayInfo() {
-        print(&quot;Point coordinates: (\(x), \(y))&quot;)
-    }
-}
-
-// Creating instances using the designated and convenience initializers
-let point1 = Point(x: 3.0, y: 5.0)     // Designated initializer
-let origin = Point()                    // Convenience initializer
-
-// Accessing methods of the instances
-point1.displayInfo()  // Output: Point coordinates: (3.0, 5.0)
-origin.displayInfo()  // Output: Point coordinates: (0.0, 0.0)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">struct</span> <span class="nc">Point</span> <span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="kd">var</span> <span class="nv">x</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="kd">var</span> <span class="nv">y</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="c1">// Designated initializer</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="kd">init</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">Double</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">Double</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="kc">self</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="kc">self</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="hll">    <span class="c1">// Convenience initializer</span>
+</span></span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="hll">    <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">)</span>
+</span></span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="hll">    <span class="p">}</span>
+</span></span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="c1">// Method to display information</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="kd">func</span> <span class="nf">displayInfo</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Point coordinates: (</span><span class="si">\(</span><span class="n">x</span><span class="si">)</span><span class="s">, </span><span class="si">\(</span><span class="n">y</span><span class="si">)</span><span class="s">)&quot;</span><span class="p">)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="p">}</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">}</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="c1">// Creating instances using the designated and convenience initializers</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="kd">let</span> <span class="nv">point1</span> <span class="p">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">)</span>     <span class="c1">// Designated initializer</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="kd">let</span> <span class="nv">origin</span> <span class="p">=</span> <span class="n">Point</span><span class="p">()</span>                    <span class="c1">// Convenience initializer</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="c1">// Accessing methods of the instances</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="n">point1</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span>  <span class="c1">// Output: Point coordinates: (3.0, 5.0)</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="n">origin</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span>  <span class="c1">// Output: Point coordinates: (0.0, 0.0)</span>
+</span></code></pre></div>
 <h2 id="3-required-initializers"><strong>3. Required Initializers:</strong></h2>
 <ul>
 <li>Required initializers are initializers that must be implemented by all subclasses of a class.</li>
 <li>They are marked with the required modifier.</li>
 </ul>
-<pre><code class="language-swift">class Shape {
-    var name: String
-
-    // Required initializer
-    required init(name: String) {
-        self.name = name
-    }
-
-    // Method to display information
-    func displayInfo() {
-        print(&quot;Shape: \(name)&quot;)
-    }
-}
-
-class Point: Shape {
-    var x: Double
-    var y: Double
-
-    // Designated initializer
-    init(x: Double, y: Double, name: String) {
-        self.x = x
-        self.y = y
-        super.init(name: name)
-    }
-
-    // Required initializer
-    required init(name: String) {
-        // Default coordinates for points
-        self.x = 0.0
-        self.y = 0.0
-        super.init(name: name)
-    }
-
-    // Method to display information
-    override func displayInfo() {
-        super.displayInfo()
-        print(&quot;Coordinates: (\(x), \(y))&quot;)
-    }
-}
-
-// Creating instances using required initializers
-let origin = Point(name: &quot;Origin&quot;)
-let point1 = Point(x: 3.0, y: 5.0, name: &quot;Point 1&quot;)
-
-// Accessing methods of the instances
-origin.displayInfo()  // Output: Shape: Origin, Coordinates: (0.0, 0.0)
-point1.displayInfo()  // Output: Shape: Point 1, Coordinates: (3.0, 5.0)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">class</span> <span class="nc">Shape</span> <span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="hll">    <span class="c1">// Required initializer</span>
+</span></span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="hll">    <span class="kr">required</span> <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+</span></span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="hll">    <span class="p">}</span>
+</span></span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="c1">// Method to display information</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="kd">func</span> <span class="nf">displayInfo</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Shape: </span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="p">}</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">}</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="kd">class</span> <span class="nc">Point</span><span class="p">:</span> <span class="n">Shape</span> <span class="p">{</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="kd">var</span> <span class="nv">x</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="kd">var</span> <span class="nv">y</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="c1">// Designated initializer</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    <span class="kd">init</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">Double</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">Double</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>        <span class="kc">self</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        <span class="kc">self</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    <span class="p">}</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="hll">    <span class="c1">// Required initializer</span>
+</span></span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="hll">    <span class="kr">required</span> <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="hll">        <span class="c1">// Default coordinates for points</span>
+</span></span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="mf">0.0</span>
+</span></span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="mf">0.0</span>
+</span></span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="hll">        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span>
+</span></span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="hll">    <span class="p">}</span>
+</span></span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    <span class="c1">// Method to display information</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">displayInfo</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>        <span class="kc">super</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Coordinates: (</span><span class="si">\(</span><span class="n">x</span><span class="si">)</span><span class="s">, </span><span class="si">\(</span><span class="n">y</span><span class="si">)</span><span class="s">)&quot;</span><span class="p">)</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>    <span class="p">}</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="p">}</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="c1">// Creating instances using required initializers</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="kd">let</span> <span class="nv">origin</span> <span class="p">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&quot;Origin&quot;</span><span class="p">)</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="kd">let</span> <span class="nv">point1</span> <span class="p">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s">&quot;Point 1&quot;</span><span class="p">)</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="c1">// Accessing methods of the instances</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="n">origin</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span>  <span class="c1">// Output: Shape: Origin, Coordinates: (0.0, 0.0)</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="n">point1</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span>  <span class="c1">// Output: Shape: Point 1, Coordinates: (3.0, 5.0)</span>
+</span></code></pre></div>
 <h2 id="4-failable-initializers"><strong>4. Failable Initializers:</strong></h2>
 <ul>
 <li>Failable initializers are initializers that may fail to initialize an instance due to invalid input or other conditions.</li>
@@ -1678,34 +1643,34 @@ point1.displayInfo()  // Output: Shape: Point 1, Coordinates: (3.0, 5.0)
 <li>Failable initializers return an optional instance (Self? or Type?).</li>
 <li>If initialization fails, the initializer returns nil.</li>
 </ul>
-<pre><code class="language-swift">struct Point {
-    var x: Double
-    var y: Double
-
-    // Failable initializer
-    init?(x: Double, y: Double) {
-        // Check if the provided coordinates are valid
-        guard x.isFinite &amp;&amp; y.isFinite else {
-            return nil // Return nil if coordinates are not finite
-        }
-
-        self.x = x
-        self.y = y
-    }
-
-    // Method to display information
-    func displayInfo() {
-        print(&quot;Point coordinates: (\(x), \(y))&quot;)
-    }
-}
-
-// Creating instances using the failable initializer
-if let validPoint = Point(x: 3.0, y: 5.0),
-   let invalidPoint = Point(x: Double.infinity, y: Double.nan) {
-    validPoint.displayInfo()   // Output: Point coordinates: (3.0, 5.0)
-    invalidPoint.displayInfo() // No output (instance creation failed)
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">struct</span> <span class="nc">Point</span> <span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="kd">var</span> <span class="nv">x</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="kd">var</span> <span class="nv">y</span><span class="p">:</span> <span class="nb">Double</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="hll">    <span class="c1">// Failable initializer</span>
+</span></span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="hll">    <span class="kd">init</span><span class="p">?(</span><span class="n">x</span><span class="p">:</span> <span class="nb">Double</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">Double</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="hll">        <span class="c1">// Check if the provided coordinates are valid</span>
+</span></span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="hll">        <span class="k">guard</span> <span class="n">x</span><span class="p">.</span><span class="n">isFinite</span> <span class="o">&amp;&amp;</span> <span class="n">y</span><span class="p">.</span><span class="n">isFinite</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="hll">            <span class="k">return</span> <span class="kc">nil</span> <span class="c1">// Return nil if coordinates are not finite</span>
+</span></span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="hll">        <span class="p">}</span>
+</span></span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="hll">
+</span></span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="n">x</span>
+</span></span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="hll">        <span class="kc">self</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="n">y</span>
+</span></span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="hll">    <span class="p">}</span>
+</span></span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    <span class="c1">// Method to display information</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="kd">func</span> <span class="nf">displayInfo</span><span class="p">()</span> <span class="p">{</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Point coordinates: (</span><span class="si">\(</span><span class="n">x</span><span class="si">)</span><span class="s">, </span><span class="si">\(</span><span class="n">y</span><span class="si">)</span><span class="s">)&quot;</span><span class="p">)</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="p">}</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="p">}</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="c1">// Creating instances using the failable initializer</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="k">if</span> <span class="kd">let</span> <span class="nv">validPoint</span> <span class="p">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">),</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>   <span class="kd">let</span> <span class="nv">invalidPoint</span> <span class="p">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">Double</span><span class="p">.</span><span class="n">infinity</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">Double</span><span class="p">.</span><span class="n">nan</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>    <span class="n">validPoint</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span>   <span class="c1">// Output: Point coordinates: (3.0, 5.0)</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>    <span class="n">invalidPoint</span><span class="p">.</span><span class="n">displayInfo</span><span class="p">()</span> <span class="c1">// No output (instance creation failed)</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="p">}</span>
+</span></code></pre></div>
 <h2 id="5-implicitly-unwrapped-failable-initializers"><strong>5. Implicitly Unwrapped Failable Initializers:</strong></h2>
 <ul>
 <li>Similar to failable initializers, these initializers return an optional instance (Self? or Type?).</li>
@@ -1779,13 +1744,13 @@ if let validPoint = Point(x: 3.0, y: 5.0),
         
         
           
-          <a href="../../logics/" class="md-footer__link md-footer__link--next" aria-label="Next: Logics">
+          <a href="../appthinning/" class="md-footer__link md-footer__link--next" aria-label="Next: AppThinning">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Logics
+                AppThinning
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -1145,6 +1145,8 @@
       
         
       
+        
+      
     
     
       
@@ -1190,6 +1192,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1264,20 +1287,20 @@
 <a href="https://developer.apple.com/swift"><img alt="Language" src="http://img.shields.io/badge/language-Swift-brightgreen.svg?style=flat" /></a>
 <a href="http://mit-license.org"><img alt="License" src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <p>You can use <code>Optional Float</code>, stick a <code>!</code> at the end if you know it to be a <code>Float</code>, or use swift <code>if/let</code></p>
-<pre><code class="language-swift">let floatConversion = Float(&quot;5.6&quot;)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">let</span> <span class="nv">floatConversion</span> <span class="p">=</span> <span class="nb">Float</span><span class="p">(</span><span class="s">&quot;5.6&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <p>The best way to handle this is direct casting:</p>
-<pre><code class="language-swift">extension String {
-    var floatValue: Float {
-        return (self as NSString).floatValue
-    }
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">extension</span> <span class="nc">String</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="kd">var</span> <span class="nv">floatValue</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="k">return</span> <span class="p">(</span><span class="kc">self</span> <span class="k">as</span> <span class="bp">NSString</span><span class="p">).</span><span class="n">floatValue</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <h3 id="now-you-can-just-call">Now you can just call</h3>
-<pre><code class="language-swift">var floatConversion = &quot;5.6&quot;.floatValue
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span> <span class="nv">floatConversion</span> <span class="p">=</span> <span class="s">&quot;5.6&quot;</span><span class="p">.</span><span class="n">floatValue</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <p>Let's grow together 🌱</p>
 <p>Cheers 🍻</p>

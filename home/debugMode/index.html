@@ -1184,6 +1184,8 @@
       
         
       
+        
+      
     
     
       
@@ -1229,6 +1231,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1319,32 +1342,32 @@
 <p><a href="https://developer.apple.com/iphone/index.action"><img alt="Platform" src="http://img.shields.io/badge/platform-iOS-blue.svg?style=flat" /></a>
 <a href="http://mit-license.org"><img alt="License" src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <h2 id="objective-c">Objective C:</h2>
-<p>Place this code in your <code>.pch</code> file:</p>
-<pre><code class="language-objectivec">#ifndef NSLog
-#ifdef DEBUG
-#define NSLog(_format_, ...) NSLog(_format_, ## __VA_ARGS__)
-#else
-#define NSLog(_format_, ...)
-#endif
-#endif
-</code></pre>
+<p>Place this code in your <code>.pch</code> file:
+<div class="language-objectivec highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#ifndef NSLog</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#ifdef DEBUG</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#define NSLog(_format_, ...) NSLog(_format_, ## __VA_ARGS__)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">#else</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cp">#define NSLog(_format_, ...)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">#endif</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="cp">#endif</span>
+</span></code></pre></div></p>
 <h1 id="_1"></h1>
 <p>Now you can use <code>NSLog</code> for all log messages that should only be printed in your debug builds.</p>
 <h2 id="swift-22">Swift 2.2:</h2>
-<pre><code class="language-swift">func print(items: Any..., separator: String = &quot; &quot;, terminator: String = &quot;\n&quot;) {
-  #if DEBUG
-    Swift.print(items[0], separator:separator, terminator: terminator)
-  #endif
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">func</span> <span class="nf">print</span><span class="p">(</span><span class="n">items</span><span class="p">:</span> <span class="nb">Any</span><span class="p">...,</span> <span class="n">separator</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">terminator</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="cp">#if</span> <span class="cp">DEBUG</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">Swift</span><span class="p">.</span><span class="bp">print</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">separator</span><span class="p">:</span><span class="n">separator</span><span class="p">,</span> <span class="n">terminator</span><span class="p">:</span> <span class="n">terminator</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="cp">#endif</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <h2 id="swift-30">Swift 3.0:</h2>
-<pre><code class="language-swift">func print(_ item: @autoclosure () -&gt; Any, separator: String = &quot; &quot;, terminator: String = &quot;\n&quot;){
-  #if DEBUG
-    Swift.print(item(), separator:separator, terminator: terminator)
-  #endif
-}
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">func</span> <span class="nf">print</span><span class="p">(</span><span class="kc">_</span> <span class="n">item</span><span class="p">:</span> <span class="kr">@autoclosure</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Any</span><span class="p">,</span> <span class="n">separator</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">terminator</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">){</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="cp">#if</span> <span class="cp">DEBUG</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">Swift</span><span class="p">.</span><span class="bp">print</span><span class="p">(</span><span class="n">item</span><span class="p">(),</span> <span class="n">separator</span><span class="p">:</span><span class="n">separator</span><span class="p">,</span> <span class="n">terminator</span><span class="p">:</span> <span class="n">terminator</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="cp">#endif</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
 <p>This executes just in the case where you are printing just one thing, which is usually call in <code>DEBUG</code> mode. That's because <code>item()</code> is not called in <code>Release</code> mode.</p>
 <p>Let's grow together 🌱</p>

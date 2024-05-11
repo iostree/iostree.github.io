@@ -1184,6 +1184,8 @@
       
         
       
+        
+      
     
     
       
@@ -1229,6 +1231,27 @@
   
   <span class="md-ellipsis">
     Initializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interview/appthinning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AppThinning
   </span>
   
 
@@ -1321,34 +1344,34 @@
 <a href="http://mit-license.org"><img alt="License" src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" /></a></p>
 <p><code>??</code> is Nil-Coalescing Operator <code>(a ?? b)</code> unwraps an <code>optional a</code> if it contains a value, or returns a default value <code>b</code> if <code>a</code> is nil. The expression <code>a</code> is always of an optional type.</p>
 <h2 id="example">Example:</h2>
-<pre><code class="language-swift">a != nil ? a! : b
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">a</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">?</span> <span class="n">a</span><span class="p">!</span> <span class="p">:</span> <span class="n">b</span>
+</span></code></pre></div>
 <h1 id="_1"></h1>
 <p>The shorthand code is</p>
-<pre><code class="language-swift">a ?? b
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">a</span> <span class="p">??</span> <span class="n">b</span>
+</span></code></pre></div>
 <h1 id="_2"></h1>
 <h2 id="example-1">Example 1:</h2>
-<pre><code class="language-swift">var aValue: Int? //aValue has no value
-let bValue = 5
-var resultValue: Int
-resultValue = aValue ?? bValue
-print(resultValue)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span> <span class="nv">aValue</span><span class="p">:</span> <span class="nb">Int</span><span class="p">?</span> <span class="c1">//aValue has no value</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">let</span> <span class="nv">bValue</span> <span class="p">=</span> <span class="mi">5</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">var</span> <span class="nv">resultValue</span><span class="p">:</span> <span class="nb">Int</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">resultValue</span> <span class="p">=</span> <span class="n">aValue</span> <span class="p">??</span> <span class="n">bValue</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="bp">print</span><span class="p">(</span><span class="n">resultValue</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_3"></h1>
-<pre><code class="language-swift">//resultValue will be 5
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">//resultValue will be 5</span>
+</span></code></pre></div>
 <h1 id="_4"></h1>
 <h2 id="example-2">Example 2:</h2>
-<pre><code class="language-swift">var aValue: Int? = 10 //aValue has value
-let bValue = 5
-var resultValue: Int
-resultValue = aValue ?? bValue
-print(resultValue)
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">var</span> <span class="nv">aValue</span><span class="p">:</span> <span class="nb">Int</span><span class="p">?</span> <span class="p">=</span> <span class="mi">10</span> <span class="c1">//aValue has value</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">let</span> <span class="nv">bValue</span> <span class="p">=</span> <span class="mi">5</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">var</span> <span class="nv">resultValue</span><span class="p">:</span> <span class="nb">Int</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">resultValue</span> <span class="p">=</span> <span class="n">aValue</span> <span class="p">??</span> <span class="n">bValue</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="bp">print</span><span class="p">(</span><span class="n">resultValue</span><span class="p">)</span>
+</span></code></pre></div>
 <h1 id="_5"></h1>
-<pre><code class="language-swift">//resultValue will be 10
-</code></pre>
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">//resultValue will be 10</span>
+</span></code></pre></div>
 <h1 id="_6"></h1>
 <p>Let's grow together 🌱</p>
 <p>Cheers 🍻</p>
