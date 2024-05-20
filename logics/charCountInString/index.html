@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://iostree.github.io/logics/sumOfEvenNumbers/">
+        <link rel="canonical" href="https://iostree.github.io/logics/charCountInString/">
       
       
-        <link rel="prev" href="../sumOfTwoIndex/">
+        <link rel="prev" href="../allCharactersPresent/">
       
       
-        <link rel="next" href="../vowels/">
+        <link rel="next" href="../../about/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Sum of Positive Even Numbers in Array - iOSTree</title>
+        <title>Get Char count in string - iOSTree</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sum-of-positive-even-numbers-in-array" class="md-skip">
+        <a href="#find-last-repeated-character-in-a-string" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sum of Positive Even Numbers in Array
+              Get Char count in string
             
           </span>
         </div>
@@ -1369,30 +1369,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Sum of Positive Even Numbers in Array
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../sumOfEvenNumbers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1401,53 +1381,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1499,10 +1432,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../charCountInString/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1511,6 +1453,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1563,41 +1506,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1611,27 +1519,60 @@
                   
 
 
-<h1 id="sum-of-positive-even-numbers-in-array">Sum of Positive Even Numbers in Array</h1>
-<h2 id="code">Code</h2>
-<div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">func</span> <span class="nf">sumOfPositiveEvenNumbers</span><span class="p">(</span><span class="kc">_</span> <span class="n">numbers</span><span class="p">:[</span><span class="nb">Int</span><span class="p">])</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="kd">var</span> <span class="nv">sum</span> <span class="p">=</span> <span class="mi">0</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">for</span> <span class="n">num</span> <span class="k">in</span> <span class="n">numbers</span> <span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="p">==</span> <span class="mi">0</span> <span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            <span class="n">sum</span> <span class="p">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">num</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="p">}</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">}</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">return</span> <span class="n">sum</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+<h1 id="find-last-repeated-character-in-a-string">Find Last Repeated Character in a string</h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Example 1:</label><label for="__tabbed_1_2">Example 2:</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Code
+    <div class="language-swift highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">func</span> <span class="nf">getCharCountInString</span><span class="p">(</span><span class="kc">_</span> <span class="n">testText</span><span class="p">:</span><span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="kd">let</span> <span class="nv">dict</span> <span class="p">=</span> <span class="n">testText</span><span class="p">.</span><span class="bp">reduce</span><span class="p">([:])</span> <span class="p">{</span> <span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Dictionary</span><span class="p">&lt;</span><span class="nb">Character</span><span class="p">,</span><span class="nb">Int</span><span class="p">&gt;</span> <span class="k">in</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="kd">var</span> <span class="nv">d</span> <span class="p">=</span> <span class="n">d</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="kd">let</span> <span class="nv">i</span> <span class="p">=</span> <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="p">??</span> <span class="mi">0</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="p">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="k">return</span> <span class="n">d</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="c1">//Accending order</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="bp">print</span><span class="p">((</span><span class="n">dict</span><span class="p">.</span><span class="bp">sorted</span><span class="p">{</span> <span class="nv">$0</span><span class="p">.</span><span class="n">key</span> <span class="o">&lt;</span> <span class="nv">$1</span><span class="p">.</span><span class="n">key</span> <span class="p">}).</span><span class="bp">map</span><span class="p">{</span> <span class="s">&quot;</span><span class="si">\(</span><span class="nv">$0</span><span class="si">)\(</span><span class="nv">$1</span><span class="si">)</span><span class="s">&quot;</span><span class="p">}.</span><span class="n">joined</span><span class="p">())</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="c1">//Without Accending order</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="bp">print</span><span class="p">((</span><span class="n">dict</span><span class="p">.</span><span class="bp">map</span><span class="p">{</span> <span class="s">&quot;</span><span class="si">\(</span><span class="nv">$0</span><span class="si">)\(</span><span class="nv">$1</span><span class="si">)</span><span class="s">&quot;</span><span class="p">}).</span><span class="n">joined</span><span class="p">())</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="example">Example</h2>
-<div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Example usage</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">let</span> <span class="nv">arr</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="bp">print</span><span class="p">(</span><span class="n">sumOfPositiveEvenNumbers</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+Example
+    <div class="language-swift highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Example usage</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">getCharCountInString</span><span class="p">(</span><span class="n">testText</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="output">Output</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>12
+Output
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">a4b2c1d4e4f2r2s3w3</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">s3c1f2b2a4r2e4w3d4</span>
+</span></code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Code
+    <div class="language-swift highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">func</span> <span class="nf">getCharCountInString</span><span class="p">(</span><span class="kc">_</span> <span class="n">testText</span><span class="p">:</span><span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="kd">var</span> <span class="nv">charArray</span> <span class="p">=</span> <span class="nb">Array</span><span class="p">(</span><span class="n">testText</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="kd">var</span> <span class="nv">charD</span> <span class="p">=</span> <span class="p">[</span><span class="nb">Character</span><span class="p">:</span><span class="nb">Int</span><span class="p">]()</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">charArray</span> <span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="k">if</span> <span class="kd">let</span> <span class="nv">count</span> <span class="p">=</span> <span class="n">charD</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>            <span class="n">charD</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="bp">count</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>            <span class="n">charD</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">=</span> <span class="mi">1</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="p">}</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="bp">print</span><span class="p">(</span><span class="n">charD</span><span class="p">.</span><span class="n">compactMap</span><span class="p">{</span><span class="s">&quot;</span><span class="si">\(</span><span class="nv">$0</span><span class="si">)\(</span><span class="nv">$1</span><span class="si">)</span><span class="s">&quot;</span><span class="p">})</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">}</span>
 </span></code></pre></div>
+Example
+    <div class="language-swift highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// Example usage</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">getCharCountInString</span><span class="p">(</span><span class="n">testText</span><span class="p">)</span>
+</span></code></pre></div>
+Output
+<div class="language-swift highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">[</span><span class="s">&quot;a4&quot;</span><span class="p">,</span> <span class="s">&quot;b2&quot;</span><span class="p">,</span> <span class="s">&quot;e4&quot;</span><span class="p">,</span> <span class="s">&quot;f2&quot;</span><span class="p">,</span> <span class="s">&quot;c1&quot;</span><span class="p">,</span> <span class="s">&quot;s3&quot;</span><span class="p">,</span> <span class="s">&quot;d4&quot;</span><span class="p">,</span> <span class="s">&quot;r2&quot;</span><span class="p">,</span> <span class="s">&quot;w3&quot;</span><span class="p">]</span>
+</span></code></pre></div></p>
+</div>
+</div>
+</div>
 
 
 
@@ -1669,7 +1610,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../sumOfTwoIndex/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sum Of Two Index in Array &amp; its Index">
+          <a href="../allCharactersPresent/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Matching string characters">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1679,20 +1620,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Sum Of Two Index in Array & its Index
+                Matching string characters
               </div>
             </div>
           </a>
         
         
           
-          <a href="../vowels/" class="md-footer__link md-footer__link--next" aria-label="Next: Calculate VOWELS in string">
+          <a href="../../about/" class="md-footer__link md-footer__link--next" aria-label="Next: About">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Calculate VOWELS in string
+                About
               </div>
             </div>
             <div class="md-footer__button md-icon">
